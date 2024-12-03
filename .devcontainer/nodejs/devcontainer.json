@@ -2,7 +2,7 @@
   "name": "APC Proxy Azure Functions (Node.js)",
   "dockerComposeFile": "docker-compose.yml",
   "service": "app",
-  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}/proxy",
+  "workspaceFolder": "/workspaces/proxy",
   "forwardPorts": [
     7071,
     10000,

@@ -16,9 +16,9 @@ const proxy = http.createServer((req, res) => {
     headers: req.headers,
     rejectUnauthorized: false // 証明書の検証をスキップ
   };
-  console.log(` Proxying request to: ${options.hostname}${options.path}`);
-  // headerのhostを変更
+  // headersのhostを変更
   options.headers.host = 'aoai-rag.openai.azure.com';
+  console.log(` Proxying request to: ${options.hostname}${options.path}`);
   console.log(` headers: ${JSON.stringify(options.headers)}`);
   
   const proxyReq = https.request(options, (proxyRes) => {
